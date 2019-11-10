@@ -21,14 +21,14 @@
             }
         }
 
-        //mostra formulário
-        private function viewFormularioPost() {
-            include("views/newPost.php");
-        }
-
         //mostra posts
         private function viewPosts() {
             include("views/posts.php");
+        }
+
+        //mostra formulário
+        private function viewFormularioPost() {
+            include("views/newPost.php");
         }
 
         //cadastrar post no banco de dados

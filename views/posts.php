@@ -19,7 +19,7 @@
                 <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet rerum modi, fuga tempora officiis nam nostrum aut fugiat vitae, dolore illo itaque porro dignissimos sapiente quidem rem excepturi perferendis distinctio.</p>
             </div>
         </div>
-        <a class="float-button" href="/instagran/formulario-post">&#10010;</a>
+        <a class="float-button" href="formulario-post">&#10010;</a>
     </main>
     
 
