@@ -10,6 +10,14 @@
             return $query->execute([$imagem, $descricao]);
         }
 
+        public function listarPosts() {
+            $db = parent::criarConexao();
+            $query = $db->query('SELECT * FROM posts ORDER BY id DESC');
+            $resultado = $query->fetchAll(PDO::FETCH_OBJ);
+            
+            return $resultado;
+        }
+
     }
 
 

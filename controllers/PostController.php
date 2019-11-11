@@ -8,7 +8,7 @@
         public function acao($rotas) {
             switch($rotas){
                 case "posts":
-                    $this->viewPosts();
+                    $this->listarPosts();
                     break;
 
                 case "formulario-post":
@@ -24,6 +24,14 @@
         //mostra posts
         private function viewPosts() {
             include("views/posts.php");
+        }
+
+        //listar posts
+        private function listarPosts() {
+            $post = new Post();
+            $listaPosts = $post->listarPosts();
+            $_REQUEST["posts"] = $listaPosts;
+            $this->viewPosts();
         }
 
         //mostra formulário
@@ -43,7 +51,9 @@
             $resultado = $post->criarPost($caminhoSalvar, $descricao);
 
             if ($resultado) {
-                header('Location:/mvc-instagram/posts');
+                header('Location:posts');
+            } else {
+                echo "deu errado!";
             }
 
         }

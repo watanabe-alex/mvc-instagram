@@ -6,7 +6,7 @@
         private $user = 'root';
         private $pass = 'root';
 
-        public function criarConexao() {
+        protected function criarConexao() {
             return new PDO($this->host, $this->user, $this->pass);
         }
 
