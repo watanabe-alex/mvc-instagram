@@ -15,14 +15,14 @@
     <main>
 
         <h1>Cadastrar Usuário</h1>
-        <form action="" method="post">
+        <form action="cadastrar-usuario" method="post">
             <div class="form-group">
-                <label for="idEmailInput">Email</label>
-                <input type="email" class="form-control" id="idEmailInput" laceholder="Digite seu e-mail">
+                <label for="idNameInput">Nome</label>
+                <input type="text" class="form-control" id="idNameInput" name="nome" laceholder="Digite seu nome">
             </div>
             <div class="form-group">
                 <label for="idPassword">Password</label>
-                <input type="password" class="form-control" id="idPassword" placeholder="Senha">
+                <input type="password" class="form-control" id="idPassword" name="senha" placeholder="Senha">
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
