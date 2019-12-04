@@ -19,6 +19,7 @@
             <div class="form-group">
                 <label for="idNameInput">Nome</label>
                 <input type="text" class="form-control" id="idNameInput" name="nome" laceholder="Digite seu nome">
+                <small class="form-text text-muted">O nome do usuário deve ser único.</small>
             </div>
             <div class="form-group">
                 <label for="idPassword">Password</label>

@@ -1,4 +1,5 @@
 <?php
+    //recebe os posts enviados do controller via request
     $posts = $_REQUEST["posts"];
 ?>
 
@@ -13,10 +14,11 @@
     <link rel="stylesheet" href="views/css/styles.css">
 </head>
 <body>
-    
+
     <?php include "views/includes/header.php"; ?>
     <main class="board">
 
+        <!-- para cada post cadastrado, cria uma div do tipo card -->
         <?php foreach($posts as $post): ?>
             <div class="card mt-5">
                 <img id="cardimg" src="<?php echo $post->imagem; ?>" alt="Card image cap">
