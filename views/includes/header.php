@@ -13,13 +13,15 @@
 
 <header>
     <nav class="navbar topo-instagran justify-content-center">
+
+        <!-- logo com link -->
         <a class="navbar-brand" href="inicio"><img width="90" src="views/img/logo.png" alt="" srcset="">Instagram</a>
         
         <!-- caso esteja logado, mostra o nome do usuário e o botão para deslogar -->
         <?php if ($usuarioNome) { ?>
-            <div>
-                <b>Olá, <?php echo $usuarioNome; ?></b>
-                <a href="deslogar-usuario">Sair</a>
+            <div class="login-info">
+                <p class="m-0">Olá, <b><?php echo $usuarioNome; ?></b>!</p>
+                <a class="text-secondary" href="deslogar-usuario">Sair</a>
             </div>
         <?php } ?>
 
