@@ -12,9 +12,11 @@
     
     <?php include "views/includes/header.php"; ?>
 
-    <main>
+    <main class="board">
 
-        <h1>Cadastrar Usuário</h1>
+        <h1 class="mb-3">Cadastrar Usuário</h1>
+
+        <!-- formulário para cadastrar novo usuário -->
         <form action="cadastrar-usuario" method="post">
             <div class="form-group">
                 <label for="idNameInput">Nome</label>
@@ -25,7 +27,7 @@
                 <label for="idPassword">Password</label>
                 <input type="password" class="form-control" id="idPassword" name="senha" placeholder="Senha">
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button class="btn btn-success" type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
 
     </main>

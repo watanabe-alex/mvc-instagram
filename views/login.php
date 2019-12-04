@@ -12,20 +12,24 @@
     
     <?php include "views/includes/header.php"; ?>
 
-    <main>
+    <main class="board">
 
-        <h1>Login</h1>
+        <h1 class="mb-3">Login</h1>
+
+        <!-- formulário para fazer login -->
         <form action="logar-usuario" method="post">
             <div class="form-group">
                 <label for="idNameInput">Nome</label>
-                <input type="text" class="form-control" id="idNameInput" name="nome" laceholder="Digite seu nome">
+                <input type="text" class="form-control" id="idNameInput" name="nome" placeholder="Digite seu nome">
             </div>
             <div class="form-group">
-                <label for="idPassword">Password</label>
+                <label for="idPassword">Senha</label>
                 <input type="password" class="form-control" id="idPassword" name="senha" placeholder="Senha">
             </div>
-            <a href="formulario-usuario">Não tenho cadastro</a>
-            <button type="submit" class="btn btn-primary">Entrar</button>
+            <div class="text-center d-flex flex-column align-items-center">
+                <a href="formulario-usuario">Não tenho cadastro</a>
+                <button class="btn btn-primary px-4 mt-2" type="submit" class="btn btn-primary">Entrar</button>
+            </div>
         </form>
 
     </main>
