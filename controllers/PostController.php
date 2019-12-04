@@ -47,13 +47,16 @@
             $caminhoSalvar = "views/img/$nomeArquivo";
             move_uploaded_file($linkTemp, $caminhoSalvar);
 
+            session_start();
+            $usuarioId = $_SESSION["usuario"]["id"];
+
             $post = new Post();
-            $resultado = $post->criarPost($caminhoSalvar, $descricao);
+            $resultado = $post->criarPost($caminhoSalvar, $descricao, $usuarioId);
 
             if ($resultado) {
                 header('Location:posts');
             } else {
-                echo "deu errado!";
+                echo "deu errado, brotherrr!";
             }
 
         }

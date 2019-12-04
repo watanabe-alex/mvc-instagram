@@ -2,7 +2,7 @@
 
     class Conexao {
 
-        private $host = 'mysql:host=localhost;dbname=instagram;port=3306';
+        private $host = 'mysql:host=localhost;dbname=mvcinstagram;port=3306';
         private $user = 'root';
         private $pass = 'root';
 

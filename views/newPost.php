@@ -13,7 +13,7 @@
     <?php include "views/includes/header.php"; ?>
     <main class="board">
         <h1> Cadastro de novo Post </h1>
-        <form action="/cadastrar-post" method="post" enctype="multipart/form-data">
+        <form action="cadastrar-post" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleFormControlFile1">Example file input</label>
                 <input type="file" class="form-control-file" name="img" id="exampleFormControlFile1">

@@ -21,6 +21,7 @@
             <div class="card mt-5">
                 <img id="cardimg" src="<?php echo $post->imagem; ?>" alt="Card image cap">
                 <div class="card-body">
+                    <p class="card-text"><b><?php echo $post->nome; ?></b></p>
                     <p class="card-text"><?php echo $post->descricao; ?></p>
                 </div>
             </div>

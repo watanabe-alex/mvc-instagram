@@ -19,11 +19,11 @@
                     break;
 
                 case "cadastrar-usuario":
-                    $this->cadastrarUsuario();
+                    $this->cadastrarUsuario($_POST["nome"],$_POST["senha"]);
                     break;
 
                 case "logar-usuario":
-                    $this->logarUsuario();
+                    $this->logarUsuario($_POST["nome"],$_POST["senha"]);
                     break;
 
                 case "deslogar-usuario":
@@ -52,25 +52,19 @@
         }
 
         //cadastra usuário na base de dados
-        private function cadastrarUsuario() {
-            $nome = $_POST["nome"];
-            $senha = $_POST["senha"];
-
+        private function cadastrarUsuario($nome, $senha) {
             $usuario = new User();
             $resultado = $usuario->cadastrarUsuario($nome, password_hash($senha, PASSWORD_DEFAULT));
 
             if ($resultado) {
-                header('Location:posts');
+                $this->logarUsuario($nome, $senha);
             } else {
                 echo "deu errado!";
             }
         }
 
         //loga usuário
-        private function logarUsuario() {
-            $nome = $_POST["nome"];
-            $senha = $_POST["senha"];
-
+        private function logarUsuario($nome, $senha) {
             $usuario = new User();
             $usuario = $usuario->getUsuario($nome);
 
@@ -78,7 +72,8 @@
                 if (password_verify($senha, $usuario->senha)) {
                     //faz login na sessão
                     session_start();
-                    $_SESSION["usuario"] = $usuario->nome;
+                    $_SESSION["usuario"]["nome"] = $usuario->nome;
+                    $_SESSION["usuario"]["id"] = $usuario->id;
                     header('Location:posts');
                 } else {
                     echo "senha errada, brow!";
