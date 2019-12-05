@@ -1,8 +1,5 @@
 <?php
 
-    //TODO: tirar os echo dos controllers
-    //TODO: passar tudo pro ingles
-
     include_once("models/User.php");
 
     class UserController {
@@ -12,7 +9,7 @@
             switch($rotas){
                 case "inicio":
                     $this->viewMain();
-                break;
+                    break;
 
                 case "formulario-usuario":
                     $this->viewFormUser();

@@ -14,3 +14,11 @@ CREATE TABLE posts(
     usuario_id int,
     foreign key(usuario_id) references usuarios(id)
 );
+
+CREATE TABLE likes(
+	id int primary key auto_increment,
+    post_id int,
+    foreign key(post_id) references posts(id),
+    usuario_id int,
+    foreign key(usuario_id) references usuarios(id)
+);

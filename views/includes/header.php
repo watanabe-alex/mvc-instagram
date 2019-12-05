@@ -7,6 +7,7 @@
     $usuarioNome = false;
     if (isset($_SESSION["usuario"]) && $_SESSION["usuario"]) {
         $usuarioNome = $_SESSION["usuario"]["nome"];
+        $usuarioId = $_SESSION["usuario"]["id"];
     }
     
 ?>
