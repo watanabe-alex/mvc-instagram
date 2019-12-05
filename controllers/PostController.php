@@ -28,8 +28,11 @@
 
         //busca os posts na base de dados e mostra na página posts
         private function listarPosts() {
+            session_start();
+            $usuarioId = $_SESSION["usuario"]["id"];
+
             $post = new Post();
-            $listaPosts = $post->listarPosts();
+            $listaPosts = $post->listarPosts($usuarioId);
             $_REQUEST["posts"] = $listaPosts; //utiliza-se o $_REQUEST para passar a lista de posts para a view
             $this->viewPosts();
         }

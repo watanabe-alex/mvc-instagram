@@ -24,18 +24,28 @@
         <!-- para cada post cadastrado, cria uma div do tipo card -->
         <?php foreach($posts as $post): ?>
             <div class="card mt-5">
+
                 <!-- imagem do post -->
                 <img id="cardimg" src="<?php echo $post->imagem; ?>" alt="Card image cap">
+
                 <div class="card-body">
+
                     <!-- botão de like e contagem -->
                     <form class="d-flex" method="post" action="like" id="like_form<?php echo $post->id?>">  <!-- id de cada formulário tem que ser dinâmico para queo submit funcione -->
+                        <!-- informações para passar para a tabela likes -->
                         <input type="hidden" name="usuario_id" value="<?php echo $usuarioId; ?>">
                         <input type="hidden" name="post_id" value="<?php echo $post->id; ?>">
-                        <a class="material-icons mr-1" style="color:black;" href="#" onClick="document.getElementById('like_form<?php echo $post->id?>').submit();">favorite_border</a>
+                        <!-- configuração do botão like -->
+                        <a class="material-icons mr-1" style="color:black;" href="#" onClick="document.getElementById('like_form<?php echo $post->id?>').submit();">
+                            <?php echo ($post->gostou)? "favorite" : "favorite_border"; ?>
+                        </a>
+                        <!-- mostra a quantidade de likes -->
                         <p><?php echo ($post->num_likes)? $post->num_likes : 0; ?></p> <!-- se número de likes = NULL, imprime 0 -->
                     </form>
+
                     <!-- usuário e descrição do post -->
                     <p class="card-text"><b><?php echo $post->usuario_nome; ?>: </b><?php echo $post->descricao; ?></p>
+                
                 </div>
             </div>
         <?php endforeach; ?>
