@@ -30,6 +30,13 @@ header {
     padding: 20px;
 }
 
+.board-posts{
+    height: 90vh;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .float-button{
     color: black;
     border: 1px solid black;
