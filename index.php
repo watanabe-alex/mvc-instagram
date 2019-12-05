@@ -1,9 +1,5 @@
 <?php 
 
-    //TODO: deixar volta para a página após o like sem piscar
-
-    //TODO: Arquivo com o DER deste projeto (diagrama com a estrutura lógica do seu banco de dados - relações entre tabelas, atributos...).
-
     //define rota default
     $rotas = key($_GET) ? key($_GET) : "inicio";
 
