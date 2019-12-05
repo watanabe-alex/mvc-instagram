@@ -36,7 +36,7 @@
                         <input type="hidden" name="usuario_id" value="<?php echo $usuarioId; ?>">
                         <input type="hidden" name="post_id" value="<?php echo $post->id; ?>">
                         <!-- configuração do botão like -->
-                        <a class="material-icons mr-1" style="color:black;" href="#" onClick="document.getElementById('like_form<?php echo $post->id?>').submit();">
+                        <a class="material-icons mr-1" style="color:black; <?php echo ($post->gostou)? "pointer-events:none;" : ""; ?>" href="#" onClick="document.getElementById('like_form<?php echo $post->id?>').submit();">
                             <?php echo ($post->gostou)? "favorite" : "favorite_border"; ?>
                         </a>
                         <!-- mostra a quantidade de likes -->

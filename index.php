@@ -1,7 +1,6 @@
 <?php 
 
     //TODO: nao rolar a página depois do like
-    //TODO: Não deixar o usuário dar mais de um like
 
     //TODO: Arquivo com o DER deste projeto (diagrama com a estrutura lógica do seu banco de dados - relações entre tabelas, atributos...).
 
