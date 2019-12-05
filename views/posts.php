@@ -32,10 +32,10 @@
                         <input type="hidden" name="usuario_id" value="<?php echo $usuarioId; ?>">
                         <input type="hidden" name="post_id" value="<?php echo $post->id; ?>">
                         <a class="material-icons mr-1" style="color:black;" href="#" onClick="document.getElementById('like_form<?php echo $post->id?>').submit();">favorite_border</a>
-                        <p>123</p>
+                        <p><?php echo ($post->num_likes)? $post->num_likes : 0; ?></p> <!-- se número de likes = NULL, imprime 0 -->
                     </form>
                     <!-- usuário e descrição do post -->
-                    <p class="card-text"><b><?php echo $post->nome; ?>: </b><?php echo $post->descricao; ?></p>
+                    <p class="card-text"><b><?php echo $post->usuario_nome; ?>: </b><?php echo $post->descricao; ?></p>
                 </div>
             </div>
         <?php endforeach; ?>
